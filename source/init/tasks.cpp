@@ -150,13 +150,13 @@ namespace hex::init {
             // Load default font
             fonts->Clear();
 
-            //cfg.OversampleH = cfg.OversampleV = 1, cfg.PixelSnapH = true;
+            cfg.OversampleH = cfg.OversampleV = 1, cfg.PixelSnapH = true;
             cfg.SizePixels = 13.0f * SharedData::fontScale;
             fonts->AddFontDefault(&cfg);
         } else {
             // Load custom font
 
-            //cfg.OversampleH = cfg.OversampleV = 1, cfg.PixelSnapH = true;
+            cfg.OversampleH = cfg.OversampleV = 1, cfg.PixelSnapH = true;
             cfg.SizePixels = 13.0f * SharedData::fontScale;
 
             fonts->AddFontFromFileTTF(fontFile.c_str(), std::floor(14.0f * SharedData::fontScale), &cfg, ranges.Data); // Needs conversion to char for Windows
